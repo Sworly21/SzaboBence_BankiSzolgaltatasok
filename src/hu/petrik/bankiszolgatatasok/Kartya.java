@@ -15,11 +15,7 @@ public class Kartya extends BankiSzolgaltatas{
     }
 
     public boolean vasarlas(int osszeg){
-        if (szamla.aktualisEgyenleg > osszeg){
-            szamla.aktualisEgyenleg -= osszeg;
-            return true;
-        }else {
-            return false;
-        }
+        return this.szamla.kivesz(osszeg);
+
     }
 }
